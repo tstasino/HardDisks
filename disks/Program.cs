@@ -110,7 +110,7 @@ namespace disks
                 
                 for (int i = used.Count-1; i >= 0; i--)
                 {
-                    for(int j = 0; j<i; j++)
+                    for(int j = 0; j<=i; j++)
                     {
                         if(used[i] <= total[j] - used[j])
                         {
