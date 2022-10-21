@@ -9,13 +9,13 @@ namespace disks
         static void Main(string[] args)
         {
             List<int> usedList = new List<int>();
-            Console.WriteLine("Hello, give me the used spaces separating them with a comma");
+            Console.WriteLine("Hello, give me the used spaces separated with a comma");
             string usedString = Console.ReadLine();
             usedList = usedString.Split(",").Select(i => Int32.Parse(i)).ToList();
 
             List<int> totalList = new List<int>();
 
-            Console.WriteLine("Now give me the total spaces ");
+            Console.WriteLine("Now give me the total spaces separated with a comma");
             string totalString = Console.ReadLine();
             totalList = totalString.Split(",").Select(i => Int32.Parse(i)).ToList();
 
@@ -76,12 +76,7 @@ namespace disks
                 foreach (var num in used)
                 {
                     if (num == 0) DisksWithData--;                    
-                }
-
-                foreach (var num in total)
-                {
-                    Console.Write(num + ",");
-                }
+                }                
 
                 return DisksWithData;
             }
